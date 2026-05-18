@@ -5,8 +5,14 @@ resources:
   - ../../base
 namespace: gitops-app-prod
 namePrefix: prod-
-commonLabels:
-  env: prod
+# commonLabels:
+#   env: prod
+labels:
+  - pairs:
+      app: gitops-app
+      env: prod
+    includeSelectors: true
+    includeTemplates: true
 # 이미지 태그 오버라이드 (CI에서 자동 업데이트)
 images:
   - name: gitops-app # : gitops-app 테스트 이미지

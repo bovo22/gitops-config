@@ -5,8 +5,14 @@ resources:
   - ../../base
 namespace: gitops-app-dev
 namePrefix: dev-
-commonLabels:
-  env: dev
+# commonLabels:
+#   env: dev
+labels:
+  - pairs:
+      app: gitops-app
+      env: dev
+    includeSelectors: true
+    includeTemplates: true
 # 이미지 태그 오버라이드 (CI에서 자동 업데이트)
 images:
   - name: gitops-app # : gitops-app 테스트 이미지
