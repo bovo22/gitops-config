@@ -9,7 +9,7 @@ namespace: ops-app1-dev
 images:
 - name: ops-app1
   newName: bovo22/ops-app1
-  newTag: sha-5ba5bda
+  newTag: sha-2611256
 
 patches:
 - patch: |-
